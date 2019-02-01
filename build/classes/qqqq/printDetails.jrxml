@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="printDetails" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b1a13e9a-3107-46f8-8561-0d3f62b2cb64">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (38)"/>
+	<queryString language="SQL">
+		<![CDATA[select *from printdetails]]>
+	</queryString>
+	<field name="prid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="prid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="printdetails"/>
+	</field>
+	<field name="oid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="oid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="printdetails"/>
+	</field>
+	<field name="qty" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="qty"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="printdetails"/>
+	</field>
+	<field name="price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="printdetails"/>
+	</field>
+	<group name="prid">
+		<groupExpression><![CDATA[$F{prid}]]></groupExpression>
+	</group>
+	<group name="oid">
+		<groupExpression><![CDATA[$F{oid}]]></groupExpression>
+	</group>
+	<group name="qty">
+		<groupExpression><![CDATA[$F{qty}]]></groupExpression>
+	</group>
+	<group name="price">
+		<groupExpression><![CDATA[$F{price}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="20" width="226" height="50" uuid="5536ce32-3433-4fc9-ab28-6c22603ad05e"/>
+				<textElement textAlignment="Center">
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[print Details Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="141" height="30" uuid="a0713842-5af2-4029-8d0a-beff1b37c9e2"/>
+				<textFieldExpression><![CDATA[$F{prid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="138" height="30" uuid="06c962f0-ffd0-486e-a188-677f5d8bea8b"/>
+				<textFieldExpression><![CDATA[$F{oid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="138" height="30" uuid="360830d4-4a09-41a5-b5b2-e03a0a52c108"/>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="138" height="30" uuid="87e469f6-d114-4b39-9648-fe60adedc6ea"/>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
